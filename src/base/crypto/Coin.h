@@ -36,7 +36,6 @@ public:
         SUMO,
         ARQMA,
         GRAFT,
-        KEVA,
         RAVEN,
         WOWNERO,
         XDAG,
@@ -44,6 +43,7 @@ public:
         TOWNFORGE,
         TUSKE,
         XEQ,
+        YADA,
         MAX
     };
 

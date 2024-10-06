@@ -50,7 +50,6 @@ static const CoinInfo coinInfo[] = {
     { Algorithm::CN_R,            "SUMO",     "Sumokoin",     240,    1000000000,     BLUE_BG_BOLD(   WHITE_BOLD_S " sumo    ") },
     { Algorithm::RX_ARQ,          "ARQ",      "ArQmA",        120,    1000000000,     BLUE_BG_BOLD(   WHITE_BOLD_S " arqma   ") },
     { Algorithm::RX_GRAFT,        "GRFT",     "Graft",        120,    10000000000,    BLUE_BG_BOLD(   WHITE_BOLD_S " graft   ") },
-    { Algorithm::RX_KEVA,         "KVA",      "Kevacoin",     0,      0,              MAGENTA_BG_BOLD(WHITE_BOLD_S " keva    ") },
     { Algorithm::KAWPOW_RVN,      "RVN",      "Ravencoin",    0,      0,              BLUE_BG_BOLD(   WHITE_BOLD_S " raven   ") },
     { Algorithm::RX_WOW,          "WOW",      "Wownero",      300,    100000000000,   MAGENTA_BG_BOLD(WHITE_BOLD_S " wownero ") },
     { Algorithm::RX_XDAG,         "XDAG",     "Xdagger",      0,      0,              BLUE_BG_BOLD(   WHITE_BOLD_S " xdagger ") },
@@ -58,6 +57,7 @@ static const CoinInfo coinInfo[] = {
     { Algorithm::RX_0,            "Townforge","Townforge",    30,     100000000,      MAGENTA_BG_BOLD(WHITE_BOLD_S " townforge ") },
     { Algorithm::RX_TUSKE,        "TSK",      "Tuske",        120,    1000000000000,  MAGENTA_BG_BOLD(WHITE_BOLD_S " tuske ") },
     { Algorithm::RX_XEQ,          "XEQ",      "Equilibria",   120,    10000,          BLUE_BG_BOLD( WHITE_BOLD_S " equilibria ") },
+    { Algorithm::RX_YADA,         "YDA",      "YadaCoin",     120,    100000000,      BLUE_BG_BOLD(   WHITE_BOLD_S " yada    ") },
 };
 
 
