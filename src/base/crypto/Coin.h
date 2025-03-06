@@ -44,6 +44,7 @@ public:
         TUSKE,
         XEQ,
         YADA,
+        BONERO,
         MAX
     };
 
