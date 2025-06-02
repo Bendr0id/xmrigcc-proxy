@@ -1,3 +1,6 @@
+# 3.4.6
+* Synched changes to XMRigCC 3.4.6
+  * Removed Bonero
 # 3.4.5
 * Synched changes to XMRigCC 3.4.5
 * Fixed daemon solo mining Bonero v18 (Config: algo=rx/0, coin=Bonero)

@@ -56,7 +56,7 @@ xmrig::DonateStrategy::DonateStrategy(Controller *controller, IStrategyListener 
 #   ifdef XMRIG_FEATURE_TLS
     m_client->setPool(Pool("donate.graef.in", 443, userId, nullptr, nullptr, Pool::kKeepAliveTimeout, false, true, Pool::MODE_POOL));
 #   else
-  m_client->setPool(Pool("donate.graef.in", 80, userId, nullptr, nullptr, Pool::kKeepAliveTimeout, false, false, Pool::MODE_DAEMON));
+    m_client->setPool(Pool("donate.graef.in", 80, userId, nullptr, nullptr, Pool::kKeepAliveTimeout, false, false, Pool::MODE_POOL));
 #   endif
 
     m_client->setRetryPause(5000);
