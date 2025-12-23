@@ -1,3 +1,6 @@
+# 3.4.8
+* Synched changes to XMRigCC 3.4.8
+  * Added Virel(VRL) RandomX variant (rx/vrl)
 # 3.4.6
 * Synched changes to XMRigCC 3.4.6
   * Removed Bonero
