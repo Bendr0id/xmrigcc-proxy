@@ -20,7 +20,7 @@ Extremely high performance Monero (XMR) Stratum protocol proxy, can easily handl
 * [Comparison](https://github.com/xmrig/xmrig-proxy/wiki/Comparison) with other proxies.
 
 ## Why?
-This proxy designed and created for handle donation traffic from XMRig. No one other solution works fine with high connection/disconnection rate.
+This proxy is designed to handle donation traffic from XMRig. No other solution works well with high connection and disconnection rates.
 
 ## Download
 * Binary releases: https://github.com/bendr0id/xmrigcc-proxy/releases
@@ -28,9 +28,7 @@ This proxy designed and created for handle donation traffic from XMRig. No one o
   * Clone with `git clone https://github.com/bendr0id/xmrigcc-proxy.git` :hammer: [Build instructions](https://github.com/xmrig/xmrig-proxy/wiki/Build).
   
 ## Usage
-:boom: If you use Linux and want handle more than **1000 connections**, you need [increase limits of open files](https://github.com/xmrig/xmrig-proxy/wiki/Ubuntu-setup).
-
-Use [config.xmrig.com](https://config.xmrig.com/proxy) to generate, edit or share configurations.
+:boom: If you are using Linux and need to manage over **1000 connections**, you must [increase the limits on open files](https://github.com/xmrig/xmrig-proxy/wiki/Ubuntu-setup).
   
 ### Options
 ```

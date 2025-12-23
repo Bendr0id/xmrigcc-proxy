@@ -9,9 +9,10 @@ option(WITH_TLS             "Enable OpenSSL support"  ON)
 option(WITH_ENV_VARS        "Enable environment variables support in config file" ON)
 option(BUILD_STATIC         "Build static binary" OFF)
 
-include (CheckIncludeFile)
-include (cmake/os.cmake)
-include (src/base/base.cmake)
+include(CheckIncludeFile)
+include(cmake/cpu.cmake)
+include(cmake/os.cmake)
+include(src/base/base.cmake)
 
 
 set(HEADERS
@@ -194,3 +195,7 @@ include_directories(${UV_INCLUDE_DIR})
 
 add_executable(${CMAKE_PROJECT_NAME} ${HEADERS} ${SOURCES} ${SOURCES_OS} ${SOURCES_SYSLOG} ${HTTP_SOURCES} ${TLS_SOURCES})
 target_link_libraries(${CMAKE_PROJECT_NAME} ${OPENSSL_LIBRARIES} ${UV_LIBRARIES} ${EXTRA_LIBS} ${GOOGLE_BREAKPAD_LIBS})
+
+if (CMAKE_CXX_COMPILER_ID MATCHES Clang AND CMAKE_BUILD_TYPE STREQUAL Release AND NOT CMAKE_GENERATOR STREQUAL Xcode)
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_STRIP} "$<TARGET_FILE:${CMAKE_PROJECT_NAME}>")
+endif()

@@ -5,8 +5,8 @@
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
  * Copyright 2017-2018 XMR-Stak    <https://github.com/fireice-uk>, <https://github.com/psychocrypt>
- * Copyright 2018-2024 SChernykh   <https://github.com/SChernykh>
- * Copyright 2016-2024 XMRig       <https://github.com/xmrig>, <support@xmrig.com>
+ * Copyright 2018-2025 SChernykh   <https://github.com/SChernykh>
+ * Copyright 2016-2025 XMRig       <https://github.com/xmrig>, <support@xmrig.com>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -33,11 +33,9 @@
 #include "base/net/tools/NetBuffer.h"
 #include "base/tools/Cvt.h"
 #include "base/tools/Chrono.h"
-#include "base/tools/Handle.h"
 #include "net/JobResult.h"
 #include "proxy/Counters.h"
 #include "proxy/Error.h"
-#include "proxy/Events.h"
 #include "proxy/events/AcceptEvent.h"
 #include "proxy/events/CloseEvent.h"
 #include "proxy/events/LoginEvent.h"
@@ -257,10 +255,10 @@ bool xmrig::Miner::parseRequest(int64_t id, const char *method, const rapidjson:
         SubmitEvent *event = SubmitEvent::create(this, id, Json::getString(params, "job_id"), Json::getString(params, "nonce"), Json::getString(params, "result"), algorithm, Json::getString(params, "sig"), m_signatureData, m_viewTag, m_extraNonce);
 
         if (!event->request.isValid() || event->request.actualDiff() < diff()) {
-            event->reject(Error::LowDifficulty);
+            event->setError(Error::LowDifficulty);
         }
         else if (hasExtension(EXT_NICEHASH) && !event->request.isCompatible(m_fixedByte)) {
-            event->reject(Error::InvalidNonce);
+            event->setError(Error::InvalidNonce);
         }
 
         if (event->error() == Error::NoError && m_customDiff && event->request.actualDiff() < m_diff) {

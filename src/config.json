@@ -27,7 +27,6 @@
         }
     ],
     "colors": true,
-    "title": true,
     "custom-diff": 0,
     "custom-diff-stats": false,
     "donate-level": 2,
@@ -44,8 +43,12 @@
             "keepalive": false,
             "enabled": true,
             "tls": false,
+            "sni": false,
             "tls-fingerprint": null,
-            "daemon": false
+            "daemon": false,
+            "socks5": null,
+            "self-select": null,
+            "submit-to-origin": false
         }
     ],
     "retries": 2,
@@ -59,6 +62,10 @@
         "ciphers": null,
         "ciphersuites": null,
         "dhparam": null
+    },
+    "dns": {
+        "ip_version": 0,
+        "ttl": 30
     },
     "user-agent": null,
     "syslog": false,
