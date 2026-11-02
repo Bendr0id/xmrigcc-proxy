@@ -1,3 +1,9 @@
+# Unreleased
+* Synched changes to XMRigCC 3.5.0 (xmrig-6.26.0)
+  * RandomX V2 (`rx/2`)
+* Removed Virel RandomX variant (`rx/vrl`) [DEAD]
+* Removed Tuske RandomX variant (`rx/tuske`) [DEAD]
+
 # 3.4.8
 * Synched changes to XMRigCC 3.4.8
   * Added Virel(VRL) RandomX variant (rx/vrl)

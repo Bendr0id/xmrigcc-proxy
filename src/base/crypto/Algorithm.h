@@ -74,15 +74,14 @@ public:
         CN_GR_5         = 0x63120105,   // "cn/turtle-lite"   GhostRider
         GHOSTRIDER_RTM  = 0x6c150000,   // "ghostrider"       GhostRider
         RX_0            = 0x72151200,   // "rx/0"             RandomX (reference configuration).
+        RX_V2           = 0x72151202,   // "rx/2"             RandomX (Monero v2).
         RX_WOW          = 0x72141177,   // "rx/wow"           RandomWOW (Wownero).
         RX_ARQ          = 0x72121061,   // "rx/arq"           RandomARQ (Arqma).
         RX_GRAFT        = 0x72151267,   // "rx/graft"         RandomGRAFT (Graft).
         RX_SFX          = 0x72151273,   // "rx/sfx"           RandomSFX (Safex Cash).
         RX_XDAG         = 0x72151278,   // "rx/xdag"          RandomXDAG (xdagger).
-        RX_TUSKE        = 0x72151274,   // "rx/tuske"         RandomTuske (TUSKE).
         RX_XEQ          = 0x72121078,   // "rx/xeq"           RandomXEQ (Equilibria).
         RX_YADA         = 0x72151279,   // "rx/yada"          RandomYada (YadaCoin).
-        RX_VRL          = 0x72141176,   // "rx/vrl"           RandomVRL (Virel).
         AR2_CHUKWA      = 0x61130000,   // "argon2/chukwa"    Argon2id (Chukwa).
         AR2_CHUKWA_V2   = 0x61140000,   // "argon2/chukwav2"  Argon2id (Chukwa v2).
         AR2_WRKZ        = 0x61120000,   // "argon2/wrkz"      Argon2id (WRKZ)
@@ -148,15 +147,14 @@ public:
 #   ifdef XMRIG_ALGO_RANDOMX
     static const char *kRX;
     static const char *kRX_0;
+    static const char* kRX_V2;
     static const char *kRX_WOW;
     static const char *kRX_ARQ;
     static const char *kRX_GRAFT;
     static const char *kRX_SFX;
     static const char *kRX_XDAG;
-    static const char *kRX_TUSKE;
     static const char *kRX_XEQ;
     static const char *kRX_YADA;
-    static const char *kRX_VRL;
 #   endif
 
 #   ifdef XMRIG_ALGO_ARGON2
